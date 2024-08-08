@@ -39,6 +39,12 @@ line
 comment"""
 
 
+'''  multi
+line
+comments
+
+'''
+
 
 
 """ variable  and type """
@@ -111,12 +117,12 @@ comment"""
 
 
 """ global variable """
-# x = "awesome"
+x = "awesome"
 
-# def myfunc():
-#     print("py is" +" " + x)
+def myfunc():
+    print("py is" +" " + x)
 
-# myfunc()
+myfunc()
  
 """ ex"""
 # x = "awesome"
@@ -419,32 +425,24 @@ comment"""
 
 
 """ python oprators"""
-# arithmetic + - / * % ** // #the floor division // rounds the result down to the nearest whole number
-# assignment = -= += /= %= *= **= //=   >>= <<= :=(=) &=(AND)|=(or) ^=(XOR)
-
-# comparison  == !=(not) > < <= >=   #True /False
-# logical     and ,or ,not             # True/fale
-
-
-
-# identify  is , is not   #true/False
-"""ex"""
+''' arithmetic + - / * % ** // #the floor division // rounds the result down to the nearest whole number '''
+''' assignment = -= += /= %= *= **= //=   >>= <<= :=(=) &=(AND)|=(or) ^=(XOR)'''
+''' comparison  == !=(not) > < <= >=   #True /False '''
+''' logical     and ,or ,not             # True/fale '''
+''' identify  is , is not   #true/False '''
 # x = ["apple", "banana"]
 # y = ["apple", "banana"]
 # z = x
 # print(x is not z)       #o/p false
-
-
-
-# membership  in , not in #True /false
-"""ex"""
+''' membership  in , not in #True /false '''
 # x = ["apple", "banana"]
 # print("banana" in x)             # op True
-
-# bitwise &(and), |(or), ^(xor), ~(not),<<(leftshift), >>(rightshift) 
-
+''' bitwise &(and), |(or), ^(xor), ~(not),<<(leftshift), >>(rightshift)  '''
 # precedence  #print((6 + 3) - (6 + 3)) #op 0
               #print(100 + 5 * 3) #op 115
+
+
+
 #highest precedence
 """ imp ranking """ 
 # # ()  :parentheses
@@ -763,6 +761,13 @@ comment"""
 # sort()     : list1.sort()
 
 """ tuple(()) """
+''' tuple        '''
+''' access tuples '''
+''' update tuples '''
+''' unpack tuples '''
+''' loop tuples   '''
+''' join tuple    '''
+''' tuple method  '''
 # tuple are used to store multiple items in a single variable
 # ordered | unchangeable | allow duplicate
 # tuple1 = ("a","b","c","d","a","c")
@@ -907,26 +912,538 @@ comment"""
 # count() : returns the no. of times aspecified value occurs in a tuple
 # index() : search the tuple for a specified value and return the position of where it was found
 
-
-""" set"""
+""" set(()) , {}"""
 # sets are used to store multiple items in a single variable
 # unorder | unchangeable | unindexed | not allow duplicates
 
+""" duplicates not allowed | unchange """
+# myset = {2,3,4,3,2,4,6}
+# print(myset)    #op  {2, 3, 4, 6}
+
+'''ex'''
+# thisset = {3,4, False ,5,6, True , "r",}
+# print(thisset)       #{False, True, 'r', 3, 4, 5, 6}
+
+""" length of set """
+# sett =  {3,4, False ,5,6, True , "r",}
+# print(len(sett)) #7
+# print(type(sett)) #<class 'set'>
+
+"""### set(())  constructor """
+''' sets                         '''
+''' acceass set items       '''
+''' add set items           '''
+''' remove set items               '''
+''' loop sets               '''
+''' join sets                      '''
+''' set methods          '''
+# sett = set(("a","b",1,3,4))
+# print(sett)        #{1, 3, 4, 'a', 'b'}
+
+""" python collextions arrays """
+# list  : ordered | changeable | allows duplicate
+# tuple : ordered | unchaneable| allows duplicate
+# dict  : ordered | changeable | dont duplicate
+# set   :unordered|unchangeable| dont duplicate |unindexed
+
+""" access items """ 
+# thisset = {3,4, False ,5,6, True , "r",} 
+# for x in thisset:
+#        print(x)                                           
+# # False
+# # True
+# # r
+# # 3
+# # 4
+# # 5
+# # 6
+
+""" cheack item """
+# thisset = {"apple", "banana", "cherry"}
+# print("banana" in thisset)
+
+""" change cannot but add() new"""
+# sett1 = {2,3,4}
+# sett1.add(7)
+# print(sett1)         #{2, 3, 4, 7}
+
+""" update() """
+# sett1 = {1,2,3}
+# sett2 = {4,7,5}
+# sett1.update(sett2)
+# print(sett1)         #{1, 2, 3, 4, 5, 7}
+
+""" add any iterable """
+# sett = {2,3,4}
+# listt = [1,2,2,2,1]
+# sett.update(listt)
+# print(sett)                    #{1, 2, 3, 4}
+
+"""## remove set item """
+''' remove() '''
+'''discard()'''
+# sett = {2,3,4}
+# sett.remove(3)
+# print(sett)           #{2, 4}
+
+''' discard() ''' #Note: If the item to remove does not exist, discard() will NOT raise an error.
+# sett = {2,3,4}
+# sett.discard(3)
+# print(sett)           #{2, 4}
+''' pop() ''' # remove a random item
+# thisset = {"apple", "banana", "cherry"}
+# x = thisset.pop()
+# print(x)
+# print(thisset)
 
 
+''' clear()'''   # empties the set
+# thisset = {"apple", "banana", "cherry"}
+# thisset.clear()
+# print(thisset)
+
+''' del ''' #keyword will delete the set
+# thisset = {"apple", "banana", "cherry"}
+# del thisset
+# print(thisset)
+
+""" loop item """
+# sett = {3,4,56,6}
+# for x in sett:
+#     print(x)
+# # 56
+# # 3
+# # 4
+# # 6
+
+""" ##join set """
+
+'''  update()           '''
+'''  union()        , | '''
+'''  intersection() , & '''
+'''  intersection_update() '''
+'''  difference()   , -   '''
+'''  difference_update() '''
+'''  symmetric_difference() , ^  '''
+''' symmetric_diffrence_update() '''
+''' update()'''       #Note: Both union() and update() will exclude any duplicate items.
+# sett ={3,4,5}
+# sett1 = {6,7,8}
+# sett.update(sett1)
+# print(sett)               #{3, 4, 5, 6, 7, 8}
 
 
+''' union() or | opretor'''
+# set1 = {"a", "b", "c"}
+# set2 = {1, 2, 3}
+# set3 = set1.union(set2)
+# print(set3)                  #{'a', 1, 2, 'b', 'c', 3}
+''' ex'''
+# set1 = {"a", "b", "c"}
+# set2 = {1, 2, 3}
+# set3 = set1 | set2       # its union()
+# print(set3)
+
+''' join muiltipal '''
+# sett1 = {"a","b"}
+# sett2 = {1,2,3}
+# sett3 = {"sd","ef"}
+# sett4 = {23,43,34}
+# mysett = sett1.union(sett2,sett3,sett4)
+# print(mysett)
+
+''' ex with |'''
+# sett1 = {"a","b"}
+# sett2 = {1,2,3}
+# sett3 = {"sd","ef"}
+# sett4 = {23,43,34}
+# mysett = sett1 |sett2 |sett3 | sett4
+# print(mysett)
+
+''' set and tuple '''
+# sett = {1,23,3}
+# tpl = (3,4,55,0)
+# mysett = sett.union(tpl)
+# print(mysett)
+''' intersection() , & opretor '''   #imp    #You can use the & operator instead of the intersection() method, and you will get the same result.
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set3 = set1.intersection(set2)
+# print(set3)                                #{'apple'}
+''' ex with & '''         #Note: The & operator only allows you to join sets with sets, and not with other data types like you can with the intersection() method.
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set3 = set1 & set2
+# print(set3)
+'''ex  False =0, true =1'''
+# set1 = {"apple", 1,  "banana", 0, "cherry"}
+# set2 = {False, "google", 1, "apple", 2, True}
+# set3 = set1.intersection(set2)
+# print(set3)          #{False, 1, 'apple'}
+''' intersection_update() '''    #intersection_update() method will also keep ONLY the duplicates, but it will change the original set instead of returning a new set.
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set1.intersection_update(set2)
+# print(set1)                       #{'apple'}
+''' difference()  , - ''' #imp
+# set1 = {1,2,3,4}
+# set2 = {3,4,5,6}
+# # set3 = set1.difference(set2)
+# # print(set3)      #{1, 2}
+# set3 = set2.difference(set1)
+# print(set3)            #{5, 6}
+'''  -  '''          #Note: The - operator only allows you to join sets with sets, and not with other data types like you can with the difference() method.
+# set1 = {1,2,3,4}
+# set2 = {3,4,5,6}
+# set3 = set1 - set2
+# print(set3)
+
+''' difference_update() '''
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set1.difference_update(set2)
+# print(set1)
+
+''' symmetric_difference()  '''
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set3 = set1.symmetric_difference(set2)
+# print(set3)
+''' ^ '''           #Note: The ^ operator only allows you to join sets with sets, and not with other data types like you can with the symmetric_difference() method.
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set3 = set1 ^ set2
+# print(set3)
+
+''' symmetric_diffrence_update() '''
+# set1 = {"apple", "banana", "cherry"}
+# set2 = {"google", "microsoft", "apple"}
+# set1.symmetric_difference_update(set2)
+# print(set1) #{'cherry', 'microsoft', 'banana', 'google'}
+  
+""" set methods """ #Python has a set of built-in methods that you can use on sets.
+''' add()                   '''
+''' clear()                 '''
+''' copy()                  '''
+''' discard()               '''
+''' pop()                   '''
+''' remove()                '''
+''' union()           |       '''
+''' diffrence()          -    '''
+''' diffrence_update()      -=   '''
+''' intersection()        &     '''
+''' intersection_update()    &=   '''
+''' isdisjoint()                ''' #Returns whether two sets have a intersection or not
+''' issubset()               <=      '''#	Returns whether another set contains this set or not
+''' <                            '''
+''' >                            '''
+''' issuperset()             >=          '''
+''' symmetric_difference()        ^       '''
+''' symmetric_difference_update()  ^=            '''
 
 
+""" dictionaries """
+''' access items ''' #get(), keys()
+''' change items '''
+''' add items    '''
+''' remove items '''
+''' loop dictionarues '''
+''' copy dictionaries '''
+''' nested dictionaries '''
+''' dictionary methods ''' 
 
+""" dictionaries """     # py3.7 are ordered py3.6 and earlier unordered
+# ordered | changeable |  not duplicates '''
+# dict1 = {"brand": "ford" , 
+#          "model ": "mustang",
+#          "year" :1964  }
+# print(dict1)
+# print(dict1["brand"])
 
+''' duplicate value '''
+# dictt = { "brand" : "ford",
+#          "model" : "mustang",
+#          "year" : 1964,
+#          "year" : 2020}
+# print(dictt) #{'brand': 'ford', 'model': 'mustang', 'year': 2020}
+# print(len(dictt))   #3
+# print(type(dictt))   # dict
 
+''' dict() constructor '''
+# dictt = dict( brand = "ford",
+#          model = "mustang",
+#          year = 1964,)
+# print(dictt) # {'bread' : 'food' ,'model':'mustang','year':1964}
 
+'''access dictionary items '''
+# dictt = { "a" : 1,
+#          "b" : 2,
+#          "c" : 3}
+# print(dictt["b"])  # 2
 
+''' get() '''
+# x = dictt.get("b")
+# print(x) #2
 
+''' keys() ''' # keys() method will return a list of all the keys in the dict
+# dictt = { "a" : 1,
+#          "b" : 2,
+#          "c" : 3}
+# x = dictt.keys()
+# print(x)  #dict_keys(['a','b','c'])
 
+''' ex '''      #imp
+# car = {  "a" : 1,
+#          "b" : 2,
+#          "c" : 3
+#          }
+# x = car.keys()
+# print(x) #before the change #['a','b','c']
+# car["d"] = 3 
+# print(x)  #afther the change #['a','b','c','d']
+ 
+''' values ''' #values() #Make a change in the original dictionary, and see that the values list gets updated as well:
+# car = {  "a" : 1,
+#          "b" : 2,
+#          "c" : 3
+#          }
+# x = car.values()
+# print(x)    #dict_values([1, 2, 3])
+# car["d"] = 4
+# print(x)    #dict_values([1, 2, 3, 4])
 
+''' items()''' #The items() method will return each item in a dictionary, as tuples in a list.
+# car = {  "a" : 1,
+#          "b" : 2,
+#          "c" : 3
+#          }
+# x = car.items()
+# print(x)          #dict_items([('a', 1), ('b', 2), ('c', 3)])
+# car["d"] =4
+# print(x)          #dict_items([('a', 1), ('b', 2), ('c', 3), ('d', 4)])
 
+''' keys() , values() , items() '''
+
+''' check the key exists '''
+# car = {  "a" : 1,
+#          "b" : 2,
+#          "c" : 3
+#          }
+# if "a" in car:
+#     print("yes , 'a' is one of  the keys")
+
+''' change dictionary items'''
+# thisdict ={
+#     "brand":"ford",
+#     "model": "mustang",
+#     "year" : 1999
+# }
+# thisdict["year" ]= 2000
+# print(thisdict)     #{'brand': 'ford', 'model': 'mustang', 'year': 2000}
+
+''' update dictionary '''
+''' update()'''
+# thisdict ={
+#     "brand":"ford",
+#     "model": "mustang",
+#     "year" : 1999
+# }
+# thisdict.update({"year":2020})
+# print(thisdict)       #{'brand': 'ford', 'model': 'mustang', 'year': 2020}
+
+''' add dictionary '''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+
+# thisdict["color"] = "red"
+# print(thisdict)
+
+''' remove dictionary items '''
+''' pop() '''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.pop("brand")
+# print(thisdict) #{'model': 'Mustang', 'year': 1964}
+
+''' popitem() '''       # removes the last inserted item
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.popitem()
+# print(thisdict)             #{'brand': 'Ford', 'model': 'Mustang'}
+
+''' del keyword '''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# # del thisdict["model"]
+# # print(thisdict) 
+
+# '''''' #del keyword can also delete the dictionary completely
+# del thisdict
+# print(thisdict)     
+
+''' clear() '''  #empties the dictionary:
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.clear()
+# print(thisdict)          #no error
+
+''' loop dictionaties '''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# # for x in thisdict:
+# #     print(x)               #only keyprint
+# for x in thisdict:
+#   print(thisdict[x])       #only value
+
+''' values() '''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# for x in thisdict.values():
+#     print(x)         #Ford \n Mustang \n 1964
+
+''' keys()'''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# for x in thisdict.keys():
+#   print(x)       #brand \n model \n year
+
+''' items()'''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# for x, y in thisdict.items():
+#     print(x,y)
+# # brand Ford
+# # model Mustang
+# # year 1964
+
+''' copy() dictionaryes '''
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# mydict = thisdict.copy()
+# print(mydict)            #{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+'''   dict() '''  
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# mydict = dict(thisdict)
+# print(mydict)               #{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+''' ex ''' #dict2 = dict1 :you can copy a dictionary simply by typing
+#because dict2 will only be a reference to dict1, and changes made in dict1 will automatically also be made in dict2 
+# dict1 = {2:"a",3:"b"}
+# dict2 = dict1
+# print(dict2)         #{2: 'a', 3: 'b'}
+
+''' Nested dictionaries '''
+# child1 = { 
+#     "naem":"a",
+#     "age" : 9}
+# child2 = { 
+#     "naem":"b",
+#     "age" : 7}
+# child3 = { 
+#     "naem":"c",
+#     "age" : 5}
+# myfamily = {
+#     "child1" : child1,
+#     "child2" : child2,
+#     "child3" : child3 }
+# print(myfamily) 
+#op {'child1': {'naem': 'a', 'age': 9}, 'child2': {'naem': 'b', 'age': 7}, 'child3': {'naem': 'c', 'age': 5}}
+
+''' ex '''
+# myfamily = {
+#     "child1" : {
+#         "name":"a",
+#         "age" : 9 },
+#     "child2" : {
+#         "name":"b",
+#         "age" : 6 },
+#     "child3" : {
+#         "name":"c",
+#         "age" : 3 }        
+#         }
+# print(myfamily) #{'child1': {'name': 'a', 'age': 9}, 'child2': {'name': 'b', 'age': 6}, 'child3': {'name': 'c', 'age': 3}}
+
+''' access items in nested dictionaries '''
+# myfamily = {
+#     "child1" : {
+#         "name":"a",
+#         "age" : 9 },
+#     "child2" : {
+#         "name":"b",
+#         "age" : 6 },
+#     "child3" : {
+#         "name":"c",
+#         "age" : 3 }        
+#         }
+# print(myfamily["child2"]["name"])
+
+''' loop through nested dictionaries '''
+''' items() '''
+# myfamily = {
+#   "child1" : {
+#     "name" : "Emil",
+#     "year" : 2004
+#   },
+#   "child2" : {
+#     "name" : "Tobias",
+#     "year" : 2007
+#   },
+#   "child3" : {
+#     "name" : "Linus",
+#     "year" : 2011
+#   }
+# }
+# for x, a in myfamily.items():
+#     print(x)
+#     for y in a:
+#         print(y + ':', a[y])
+
+''' dictionary methods '''
+''' get() '''
+''' update() '''
+''' values() '''
+''' keys() '''
+''' pop() '''
+''' popitems() '''
+''' clear() '''
+''' copy() '''
+''' items() '''
+''' fromkeys() ''' # return a dict with specified keys and value
+''' setdefualt() ''' # return value of the spwcified key ,if key does not exist: insert the key , with specified value
 
 
 
